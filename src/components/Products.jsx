@@ -2,7 +2,7 @@ import Item from "./Item"
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Products(){
+export default function Products({search}){
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
@@ -27,7 +27,9 @@ useEffect(() => {
             <h2 className="title">Products</h2>
             <div className="products-list">
 
-                {products.map((product) => (
+                {products.filter((product)=>{
+                    return search.toLowerCase() === ''? product: product.name.toLowerCase().includes(search)
+                }).map((product) => (
                     <Item product={product} key={product.id} />
                 ))}
                 

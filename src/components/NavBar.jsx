@@ -2,7 +2,9 @@ import styles from './NavBar.module.css';
 import {Link} from 'react-router-dom';
 
 
-export default function NavBar(){
+export default function NavBar({search, setSearch}){
+
+    
     return (
 
         <nav className={styles.navbar}>
@@ -16,7 +18,7 @@ export default function NavBar(){
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div className={styles.search}>
-                <input type="text" placeholder="Search..." />
+                <input type="text" placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)}/>
                 <button type="submit"><i className="bi bi-search"></i></button></div>
             <div className={styles.cart}>
                <Link to="/cart"><i className="bi bi-cart-fill"></i> Cart</Link></div>

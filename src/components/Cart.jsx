@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import Cart_item from "./cart-item";
-export default function Cart() {
+import Cart_item from "./Cart-item.jsx";
+export default function Cart({search}) {
   const [cart, setCart] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
   const [subTotal, setSubTotal] = useState(0);
@@ -54,7 +54,9 @@ export default function Cart() {
             <span>Price</span>
           </div>
           <div className="collection">
-            {cart.map((item) => (
+            {cart.filter((item) => {
+              return search.toLowerCase() === ''? item: item.name.toLowerCase().includes(search)
+            }).map((item) => (
               //onCartChange here is a callback to notify this page if changes are made to the individual cart_items.
               //It calls refreshCart method which is defined above and rerenders the page.
               <Cart_item  item={item} key={item.id} onCartChange={refreshCart} />

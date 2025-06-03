@@ -7,7 +7,7 @@
       "review": 4.7,
       "numberOfReviews": 1350,
       "price": 349.99,
-      "inCart": true,
+      "inCart": false,
       "features": [
         "Industry-leading noise cancellation",
         "Up to 30 hours of battery life",
@@ -37,7 +37,7 @@
       "review": 4.6,
       "numberOfReviews": 1675,
       "price": 299,
-      "inCart": false,
+      "inCart": true,
       "features": [
         "CustomTune sound calibration",
         "World-class noise cancellation",
@@ -67,7 +67,7 @@
       "review": 4.4,
       "numberOfReviews": 1940,
       "price": 79.99,
-      "inCart": true,
+      "inCart": false,
       "features": [
         "Multi-mode noise cancellation",
         "Wireless charging",
@@ -111,12 +111,12 @@
   ],
   "cart": [
     {
-      "id": "5",
+      "id": "3",
       "quantity": 1,
-      "price": 79.99,
-      "total": 79.99,
-      "image": "src/assets/headset5.jpg",
-      "name": "Anker Soundcore Life P3",
+      "price": 299,
+      "total": 299,
+      "image": "src/assets/earbuds1.jpg",
+      "name": "Bose QuietComfort Ultra Earbuds",
       "instock": true
     },
     {
@@ -126,15 +126,6 @@
       "total": 49.95,
       "image": "src/assets/headset2.jpg",
       "name": "JBL Tune 510BT Wireless Headphones",
-      "instock": true
-    },
-    {
-      "id": "1",
-      "quantity": 1,
-      "price": 349.99,
-      "total": 349.99,
-      "image": "src/assets/headset1.jpg",
-      "name": "Sony WH-1000XM5",
       "instock": true
     }
   ]
